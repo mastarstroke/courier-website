@@ -1,0 +1,53 @@
+  
+  .formBtn { 
+    width: 140px;
+    display: inline-block;
+    
+    background: teal;
+    color: #fff;
+    font-weight: 100;
+    font-size: 1.2em;
+    border: none;
+    height: 30px;
+    padding-bottom: 2rem;
+  }
+
+/* Add padding to containers */
+  
+  @media only screen and (max-width: 768px) {
+    .container-fluid {
+        width: 100%;
+    }
+  }
+  
+  /* Full-width input fields */
+  input[type=text],
+  input[type=email],
+  select[type=text],
+  textarea[type=text] {
+    width: 100%;
+    padding: 12px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  input[type=text]:focus,
+  input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Overwrite default styles of hr */
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .checkout
+    {
+      width: 11rem;
+    }
+  }

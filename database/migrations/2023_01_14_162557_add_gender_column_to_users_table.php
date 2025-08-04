@@ -14,8 +14,10 @@ class AddGenderColumnToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('gender')->nullable();
-            $table->integer('status')->default(1);
+            if(!Schema::hasColumn('users', 'gender', 'status')){
+                $table->string('gender')->nullable();
+                $table->integer('status')->default(1);
+            }
         });
     }
 

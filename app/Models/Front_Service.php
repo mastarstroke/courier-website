@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Front_Service extends Model
 {
+    protected $table = 'front_services';
+    
     use HasFactory;
 
 }

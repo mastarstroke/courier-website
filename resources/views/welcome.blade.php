@@ -8,7 +8,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>{{$company_details->company_name}} - Home Delivery Online made easy</title>
+    <title>{{$company_details->company_name ?? 'N/A'}} - Home Delivery Online made easy</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png" />
@@ -62,8 +62,8 @@
                             <div class="col-lg-12">
                                 <nav class="navbar navbar-expand-lg">
                                     <a class="navbar-brand" href="/">
-                                        <img src="/storage/company/{{$company_details->company_logo}}"
-                                            alt="Logo" /><span>{{$company_details->company_name}}</span>
+                                        <img src="/storage/company/{{$company_details->company_logo ?? 'N/A'}}"
+                                            alt="Logo" /><span>{{$company_details->company_name ?? 'N/A'}}</span>
                                     </a>
                                     <!-- ========================= The Mobile Nav Toggler ========================= -->
                                     <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -190,9 +190,9 @@
                     <div class="row align-items-center">
                         <div class="col-lg-6">
                             <div class="hero-content">
-                                <h1 class="wow fadeInUp" data-wow-delay=".2s">{{$setting_one->hero_title}}
+                                <h1 class="wow fadeInUp" data-wow-delay=".2s">{{$setting_one->hero_title ?? 'N/A'}}
                                 </h1>
-                                <p class="wow fadeInUp" data-wow-delay=".4s">{{$setting_one->hero_paragraph}}
+                                <p class="wow fadeInUp" data-wow-delay=".4s">{{$setting_one->hero_paragraph ?? 'N/A'}}
                                 </p>
                                 <a href="{{route('order-index')}}" rel="nofollow"
                                     class="main-btn btn-hover wow fadeInUp" data-wow-delay=".6s">Order Courier now!</a>
@@ -200,7 +200,7 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="hero-img wow fadeInUp" data-wow-delay=".5s">
-                                <img src="/settingsimage/{{$setting_one->hero_image}}" height="400" alt="">
+                                <img src="/settingsimage/{{$setting_one->hero_image ?? 'N/A'}}" height="400" alt="">
                             </div>
                         </div>
                     </div>
@@ -224,11 +224,11 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="single-service wow fadeInUp" data-wow-delay=".2s">
                                 <div class="icon">
-                                    <img src="{{ Storage::url($serv->image) }}" alt="">
+                                    <img src="{{ Storage::url($serv->image) ?? 'N/A'}}" alt="">
                                 </div>
                                 <div class="content">
-                                    <h3>{{$serv->name}}</h3>
-                                    <p>{{$serv->description}}</p>
+                                    <h3>{{$serv->name ?? 'N/A'}}</h3>
+                                    <p>{{$serv->description ?? 'N/A'}}</p>
                                 </div>
                             </div>
                         </div>
@@ -244,16 +244,16 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="about-img wow fadeInUp" data-wow-delay=".5s">
-                                <img src="/settingsimage/{{$setting_one->about_image}}" height="500" alt="">
+                                <img src="/settingsimage/{{$setting_one->about_image ?? 'N/A'}}" height="500" alt="">
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="about-content">
                                 <div class="section-title">
                                     <span class="wow fadeInUp" data-wow-delay=".2s">About Us</span>
-                                    <h1 class="wow fadeInUp" data-wow-delay=".4s">{{$setting_one->about_title}}
+                                    <h1 class="wow fadeInUp" data-wow-delay=".4s">{{$setting_one->about_title ?? 'N/A'}}
                                     </h1>
-                                    <p class="wow fadeInUp my-2" data-wow-delay=".6s">{{$setting_one->about_paragraph}}</p>
+                                    <p class="wow fadeInUp my-2" data-wow-delay=".6s">{{$setting_one->about_paragraph ?? 'N/A'}}</p>
                                 </div>
 
                                 <div class="counter-up wow fadeInUp" data-wow-delay=".8s">
@@ -285,8 +285,8 @@
                             <div class="delivery-content">
                                 <div class="section-title">
                                     <span class="wow fadeInUp" data-wow-delay=".2s">How We Work</span>
-                                    <h1 class="mb-35 wow fadeInUp" data-wow-delay=".4s">{{$setting_two->how_title}}</h1>
-                                    <p class="mb-35 wow fadeInUp" data-wow-delay=".6s">{{$setting_two->how_paragraph}}</p>
+                                    <h1 class="mb-35 wow fadeInUp" data-wow-delay=".4s">{{$setting_two->how_title ?? 'N/A'}}</h1>
+                                    <p class="mb-35 wow fadeInUp" data-wow-delay=".6s">{{$setting_two->how_paragraph ?? 'N/A'}}</p>
                                     <a href="{{route('order-index')}}" class="main-btn btn-hover wow fadeInUp"
                                         data-wow-delay=".8s">Order Courier now!</a>
                                 </div>
@@ -294,7 +294,7 @@
                         </div>
                         <div class="col-lg-7 order-first order-lg-last">
                             <div class="delivery-img wow fadeInUp" data-wow-delay=".5s">
-                                <img src="/settingsimage/{{$setting_two->how_image}}" height="500" alt="">
+                                <img src="/settingsimage/{{$setting_two->how_image ?? 'N/A'}}" height="500" alt="">
                             </div>
                         </div>
                     </div>
@@ -308,15 +308,15 @@
                     <div class="row align-items-center">
                         <div class="col-lg-6">
                             <div class="about-img received-img wow fadeInUp" data-wow-delay=".5s">
-                                <img src="/settingsimage/{{$setting_two->contact_image}}" height="400" alt="">
+                                <img src="/settingsimage/{{$setting_two->contact_image ?? 'N/A'}}" height="400" alt="">
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="about-content received-content">
                                 <div class="section-title">
                                     <span class="wow fadeInUp" data-wow-delay=".2s">Contactless Delivery</span>
-                                    <h1 class="mb-25 wow fadeInUp" data-wow-delay=".4s">{{$setting_two->contact_title}}</h1>
-                                    <p class="wow fadeInUp" data-wow-delay=".6s">{{$setting_two->contact_paragraph}}</p>
+                                    <h1 class="mb-25 wow fadeInUp" data-wow-delay=".4s">{{$setting_two->contact_title ?? 'N/A'}}</h1>
+                                    <p class="wow fadeInUp" data-wow-delay=".6s">{{$setting_two->contact_paragraph ?? 'N/A'}}</p>
                                 </div>
                             </div>
                         </div>
@@ -356,8 +356,8 @@
                                 </div>
                                 <div class="info">
                                     <div class="text">
-                                        <h5>{{$review->name}}</h5>
-                                        <p>From <span>{{$review->city}}</span></p>
+                                        <h5>{{$review->name ?? 'N/A'}}</h5>
+                                        <p>From <span>{{$review->city ?? 'N/A'}}</span></p>
                                     </div>
                                 </div>
                             </div>
@@ -378,7 +378,7 @@
 
                         <div class="col-lg-6">
                             <div class="contact-us wow fadeInUp" data-wow-delay=".5s">
-                                <img src="/settingsimage/{{$setting_two->contact_us}}" alt="">
+                                <img src="/settingsimage/{{$setting_two->contact_us ?? 'N/A'}}" alt="">
                             </div>
                         </div>
 
@@ -392,13 +392,13 @@
                                     <div class="wow fadeInUp" data-wow-delay=".6s">
                                         <hr>
                                         <p class="my-2"><img src="assets/img/contact/address-icon.png"
-                                                class="contact-icon" alt=""> {{$company_details->address}}</p>
+                                                class="contact-icon" alt=""> {{$company_details->address ?? 'N/A'}}</p>
                                         <hr>
                                         <p class="my-2"><img src="assets/img/contact/email-icon.png"
-                                                class="contact-icon" alt=""> {{$company_details->company_email}}</p>
+                                                class="contact-icon" alt=""> {{$company_details->company_email ?? 'N/A'}}</p>
                                         <hr>
                                         <p class="my-2"><img src="assets/img/contact/phone-icon.png"
-                                                class="contact-icon" alt=""> {{$company_details->company_phone}}</p>
+                                                class="contact-icon" alt=""> {{$company_details->company_phone ?? 'N/A'}}</p>
                                         <hr>
                                     </div>
                                 </div>

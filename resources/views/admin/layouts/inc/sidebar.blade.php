@@ -2,8 +2,8 @@
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
             <a href="" class="brand-link elevation-4">
-            <span class="brand-text font-weight-light"><img width="30" src="/storage/company/{{$company_details->company_logo}}"
-                 alt="Logo" /> {{$company_details->company_name}}</span>
+            <span class="brand-text font-weight-light"><img width="30" src="/storage/company/{{$company_details->company_logo ?? 'N/A'}}"
+                 alt="Logo" /> {{$company_details->company_name ?? 'N/A'}}</span>
             </a>
 
             <!-- Sidebar -->

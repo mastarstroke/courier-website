@@ -76,7 +76,7 @@ class Config implements ConfigInterface
     {
         $this->setVersion($version);
 
-        $this->setApiKey($apiKey ?: self::getEnvVariable('STRIPE_API_KEY', 'sk_test_51Mjw5yI6MV5mEwX72ucSDLAIFzzW6FGUEQxlNkWgKweMLUDMJtI4sP3uhKyVYAANOwmf6LPwLsCdm0NZ2gJsKM2t00VMrslDzb'));
+        $this->setApiKey($apiKey ?: self::getEnvVariable('STRIPE_API_KEY', ''));
 
         $this->setApiVersion($apiVersion ?: self::getEnvVariable('STRIPE_API_VERSION', '2017-06-05'));
     }

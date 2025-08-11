@@ -14,7 +14,7 @@ class AddUnreadToContactTable extends Migration
     public function up()
     {
         Schema::table('contacts', function (Blueprint $table) {
-            if(!Schema::hasColumn('users', 'unread')){
+            if(!Schema::hasColumn('contacts', 'unread')){
                 $table->integer('unread')->nullable();
             }
         });
